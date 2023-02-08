@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Background blur</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+    <style>
+        video {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #blur, #unblur{
+            padding: 15px 25px;
+            border: 1px solid #ee9595;
+            border-radius: 30px;
+            font-size: 20px;
+            background: white;
+            font-weight: 700;
+            color: #cc7c7c;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <div class="video-container">
+            <video id="video" width="480" height="320" autoplay playsinline></video>
+            <canvas hidden id="canvas"></canvas>
+        </div>
+        <div class="buttons">
+            <button id="blur" type="button">Blur</button>
+            <button id="unblur" type="button" hidden>Unblur</button>
+        </div>
+    </main>
+
+    <script src="face.js"></script>
+</body>
+</html>
